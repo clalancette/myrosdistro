@@ -1,0 +1,27 @@
+name: "Version update labeler"
+on:
+- pull_request_target
+
+permissions:
+  contents: read
+
+jobs:
+  triage:
+    permissions:
+      contents: read  # for actions/labeler to determine modified files
+      pull-requests: write  # for actions/labeler to add labels to PRs
+    runs-on: ubuntu-latest
+    steps:
+    - uses: technote-space/get-diff-actions@v6
+      id: git-diff
+      with:
+        FILES: |
+          melodic/distribution.yaml
+          noetic/distribution.yaml
+          foxy/distribution.yaml
+          humble/distribution.yaml
+          rolling/distribution.yaml
+    - uses: actions-ecosystem/action-add-labels@v1
+      if: steps.git-diff.outputs.count == 1
+      with:
+        labels: version-bump-only
