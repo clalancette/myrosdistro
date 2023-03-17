@@ -12,7 +12,7 @@ jobs:
       pull-requests: write  # for actions/labeler to add labels to PRs
     runs-on: ubuntu-latest
     steps:
-    - uses: technote-space/get-diff-actions@v6
+    - uses: technote-space/get-diff-action@v6
       id: git-diff
       with:
         FILES: |
