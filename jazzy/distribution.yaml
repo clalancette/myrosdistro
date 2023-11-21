@@ -114,7 +114,7 @@ repositories:
   ament_cmake:
     doc:
       type: git
-      url: https://github.com/ament/ament_cmake.git
+      url: https://github.com/clalancette/ament_cmake.git
       version: rolling
     release:
       packages:
@@ -147,7 +147,7 @@ repositories:
     source:
       test_pull_requests: true
       type: git
-      url: https://github.com/ament/ament_cmake.git
+      url: https://github.com/clalancette/ament_cmake.git
       version: rolling
     status: developed
   ament_cmake_catch2:
@@ -202,7 +202,7 @@ repositories:
   ament_index:
     doc:
       type: git
-      url: https://github.com/ament/ament_index.git
+      url: https://github.com/clalancette/ament_index.git
       version: rolling
     release:
       packages:
@@ -215,7 +215,7 @@ repositories:
     source:
       test_pull_requests: true
       type: git
-      url: https://github.com/ament/ament_index.git
+      url: https://github.com/clalancette/ament_index.git
       version: rolling
     status: maintained
   ament_lint:
